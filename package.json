@@ -1,6 +1,6 @@
 {
   "name": "BDD",
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "@wdio/cli": "^9.20.0",
     "@wdio/cucumber-framework": "^9.20.0",

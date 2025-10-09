@@ -1,46 +1,10 @@
 export const config = {
-  //
-  // ====================
-  // Runner Configuration
-  // ====================
-  // WebdriverIO supports running e2e tests as well as unit and component tests.
   runner: "local",
-  //
-  // ==================
-  // Specify Test Files
-  // ==================
-  // Define which test specs should run. The pattern is relative to the directory
-  // of the configuration file being run.
-  //
-  // The specs are defined as an array of spec files (optionally using wildcards
-  // that will be expanded). The test for each spec file will be run in a separate
-  // worker process. In order to have a group of spec files run in the same worker
-  // process simply enclose them in an array within the specs array.
-  //
-  // The path of the spec files will be resolved relative from the directory of
-  // of the config file unless it's absolute.
-  //
   specs: ["../features/**/*.feature"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
   ],
-  //
-  // ============
-  // Capabilities
-  // ============
-  // Define your capabilities here. WebdriverIO can run multiple capabilities at the same
-  // time. Depending on the number of capabilities, WebdriverIO launches several test
-  // sessions. Within your capabilities you can overwrite the spec and exclude options in
-  // order to group specific specs to a specific capability.
-  //
-  // First, you can define how many instances should be started at the same time. Let's
-  // say you have 3 different capabilities (Chrome, Firefox, and Safari) and you have
-  // set maxInstances to 1; wdio will spawn 3 processes. Therefore, if you have 10 spec
-  // files and you set maxInstances to 10, all spec files will get tested at the same time
-  // and 30 processes will get spawned. The property handles how many capabilities
-  // from the same test should run tests.
-  //
   maxInstances: 10,
   //
   // If you have trouble getting all important capabilities together, check out the
@@ -84,7 +48,7 @@ export const config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  // baseUrl: 'http://localhost:8080',
+  baseUrl: "https://ej2.syncfusion.com/",
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -128,7 +92,7 @@ export const config = {
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: ["./src/features/step-definitions/steps.js"],
+    require: ["./src/step-definitions/*steps.js"],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
